@@ -1,0 +1,31 @@
+<div *ngIf="isLoading" else elseBlock>
+    <app-circular-progress></app-circular-progress>
+</div>
+
+<div class="container" #elseBlock>
+    <div class="title-page">
+        <div class="title">
+            <div>
+                <h2>{{data.title}}</h2>
+                <p>{{data.rating.star}}<mat-icon>star</mat-icon> ({{data.rating.count}})</p>
+            </div>
+            <button (click)="addToWatchList()" *ngIf="!inWatchList">Add to Watchlist</button>
+            <button (click)="removeFromWatchList(data.id)" *ngIf="inWatchList">Remove from Watchlist</button>
+
+        </div>
+        <div class="content">
+            <div class="main-content">
+                <div class="main-image">
+                    <img [src]="data.image" alt="">
+                </div>
+                <div class="plot">
+                    <h5>Plot :</h5>
+                    <p> &nbsp;{{data.plot}}</p>
+                </div>
+            </div>
+            <div class="side-content">
+                <app-side-content [title]="data.title"></app-side-content>
+            </div>
+        </div>
+    </div>
+</div>

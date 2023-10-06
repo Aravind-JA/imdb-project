@@ -1,0 +1,26 @@
+<div class="background">
+<div class="container">
+    <div class="heading">
+        <p>Search results for : {{data.query}}</p>
+        <p>{{data.message}}</p>
+    </div>
+
+    <div *ngFor="let result of data.results" class="result">
+        <div class="search-results">
+            <div class="image" (click)="goToContent(result.id)">
+                <img [src]="result.image" alt="">
+            </div>
+            <div class="content">
+                <h3>{{result.title}}</h3>
+                <h6>{{result.year+','+result.type }}</h6>
+                <button (click)="addToWatchList(result.id,result.image,result.title)">Add to Watchlist</button>
+            </div>
+            <div class="link">
+                <a [href]=" 'https://www.imdb.com/title/' + result.id ">
+                    <mat-icon>info</mat-icon>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

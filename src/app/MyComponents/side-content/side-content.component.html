@@ -1,0 +1,17 @@
+<div class="card-box">
+    <div class="heading">
+        <h3>Related : </h3>
+    </div>
+    <div *ngFor="let data of data.results">
+        <div class="card" (click)="onSelection(data.id)">
+            <div class="card-image">
+                <img [src]="data.image" alt="">
+            </div>
+            <div class="card-content">
+                <h5>{{data.title}}</h5>
+                <p>{{data.type}},{{data.year}}</p>
+                <button (click)="addToWatchList(data.id,data.image,data.title)">Add to Watchlist</button>
+            </div>
+        </div>
+    </div>
+</div>

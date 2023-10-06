@@ -1,0 +1,24 @@
+.image{
+    position: relative;
+}
+img{
+    width: 100%;
+}
+.text{
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 100%;
+    color: yellow;
+    z-index: 1;
+    /* text-shadow: 2px 2px 4px rgba(255, 255, 0, 0.8); */
+    text-shadow:2px 4px 8px #60f;
+}
+.text h1{
+    font-size: 48px;
+    font-weight: 800;
+}
+.text h3{
+    font-size: 36px;
+    font-weight: 600;
+}

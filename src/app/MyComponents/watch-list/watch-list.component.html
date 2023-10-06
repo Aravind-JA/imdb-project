@@ -1,0 +1,13 @@
+<div class="watch-list">
+    <div class="container">
+        <h2 class="heading">Watch List</h2>
+        <div class="card-box">
+            <div *ngFor="let item of watchList">
+                <div class="card" (click)="goToContent(item.id)">
+                    <img [src]="item.imageLink" alt="">
+                    <h2>{{item.title}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

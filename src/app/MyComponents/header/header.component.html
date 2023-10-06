@@ -1,0 +1,28 @@
+<div class="header">
+    <div class="container">
+        <div class="header-contents">
+            <div class="header-item" (click)="goHome()">
+                IMDb
+            </div>
+            <div class="header-item">
+                <mat-icon>menu</mat-icon>
+                <span>Menu</span>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search in IMDb" [(ngModel)]="searchQuery" (keyup.enter)="onSearch()">
+                <button (click)="onSearch()"><mat-icon>search</mat-icon></button>
+            </div>
+            <div class="header-item">
+                IMDbPro
+            </div>
+            <div class="header-item" (click)="showWatchList()">
+                <mat-icon>bookmark_add</mat-icon>
+                Watchlist &nbsp; 
+               <span>({{count}})</span> 
+            </div>
+            <div class="header-item">
+                Sign In
+            </div>
+        </div>
+    </div>
+</div>
